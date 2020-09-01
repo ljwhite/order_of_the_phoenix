@@ -12,5 +12,7 @@ describe 'As a user' do
       expect(page).to have_css(".name")
       expect(page).to have_css(".house")
     end
+
+    expect(page).to have_content("21 Members")
   end
 end

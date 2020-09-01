@@ -1,13 +1,14 @@
 <h1>Order of the Phoenix Members</h1>
 
 <% if @members.empty? %>
-  <h2>There are no Members from this house!</h2>
+  <h3>There are no Members from this house!</h3>
+
 <% else %>
-  <h2>House <%= @members.first.house %></h2>
+  <h3>House <%= @members.first.house %> has <%= @members.size %> Members</h3>
 
   <% @members.each do |member| %>
     <div class="member">
-      <h3 class="name"> <%= member.name %> </h3>
+      <h4 class="name"> <%= member.name %> </h4>
     <ul>
       <% if member.role %>
         <li class="role">Role: <%= member.role %></li>
