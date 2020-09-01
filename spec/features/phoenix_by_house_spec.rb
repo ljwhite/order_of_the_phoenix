@@ -12,6 +12,5 @@ describe 'As a user' do
       expect(page).to have_css(".name")
       expect(page).to have_css(".house")
     end
-    save_and_open_page
   end
 end

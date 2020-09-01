@@ -5,6 +5,8 @@ class MemberService
     json = JSON.parse(response.body, symbolize_names: true)
   end
 
+  private
+
   def conn
     @conn ||= Faraday.new(url: "https://www.potterapi.com")
   end
