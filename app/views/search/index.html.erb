@@ -1,17 +1,22 @@
 <h1>Order of the Phoenix Members</h1>
-<h2>House <%= @members.first.house %></h2>
 
-<% @members.each do |member| %>
-  <div class="member">
-    <h3 class="name"> <%= member.name %> </h3>
-  <ul>
-    <% if member.role %>
-      <li class="role">Role: <%= member.role %></li>
-    <% end %>
-    <li class="house">House: <%= member.house %></li>
-    <% if member.patronus %>
-      <li class="patronus">Patronus: <%= member.patronus %></li>
-    <% end %>
-  </ul>
-</div>
+<% if @members.empty? %>
+  <h2>There are no Members from this house!</h2>
+<% else %>
+  <h2>House <%= @members.first.house %></h2>
+
+  <% @members.each do |member| %>
+    <div class="member">
+      <h3 class="name"> <%= member.name %> </h3>
+    <ul>
+      <% if member.role %>
+        <li class="role">Role: <%= member.role %></li>
+      <% end %>
+      <li class="house">House: <%= member.house %></li>
+      <% if member.patronus %>
+        <li class="patronus">Patronus: <%= member.patronus %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 <% end %>
