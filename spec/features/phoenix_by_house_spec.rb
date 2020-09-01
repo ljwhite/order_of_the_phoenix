@@ -10,9 +10,8 @@ describe 'As a user' do
 
     within(first(".member")) do
       expect(page).to have_css(".name")
-      expect(page).to have_css(".role")
       expect(page).to have_css(".house")
-      expect(page).to have_css(".patronus")
     end
+    save_and_open_page
   end
 end
